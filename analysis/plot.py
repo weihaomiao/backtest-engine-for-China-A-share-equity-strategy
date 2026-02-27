@@ -1,7 +1,20 @@
+import platform
+import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib.dates as mdates
 import numpy as np
+
+# 中文与负号显示（按系统选用可用字体）
+_sys = platform.system()
+if _sys == "Windows":
+    matplotlib.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "SimSun"]
+elif _sys == "Darwin":
+    matplotlib.rcParams["font.sans-serif"] = ["PingFang SC", "Heiti SC", "STHeiti"]
+else:
+    matplotlib.rcParams["font.sans-serif"] = ["WenQuanYi Micro Hei", "Noto Sans CJK SC", "Droid Sans Fallback"]
+matplotlib.rcParams["axes.unicode_minus"] = False
+
 
 def plot_equity_curve(
     equity_history: dict,

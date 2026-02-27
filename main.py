@@ -70,7 +70,7 @@ benchmark = get_benchmark_series(list(engine.equity_history.keys()), "000905.SH"
 plot_equity_curve(
     equity_history=engine.equity_history, 
     benchmark=benchmark,
-    title="test",
+    title=f"{name}_净值曲线",
     save_path=plot_save_path
 )
 
