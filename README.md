@@ -4,6 +4,11 @@
 
 ---
 
+## 策略回测结果
+<img width="4463" height="2364" alt="全A_10个行业_equity_curve" src="https://github.com/user-attachments/assets/73eb4ab7-182c-4d08-9baa-350607419b5c" />
+---
+
+
 ## 功能概览
 
 - **日频回测**：按日执行调仓，支持实盘约束（涨跌停、停牌、ST/退市过滤）
