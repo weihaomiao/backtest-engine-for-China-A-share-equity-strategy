@@ -1,0 +1,34 @@
+回测日频：
+===股票===
+# 什么时候需要最新数据了，就更新哈
+
+1. 更新 daily_stockpool.xlsx in E:\妖魔鬼怪\backtest\data\level1\daily\stock
+2. 跑一下 index.py 更新中证500作为benchmark
+3. 跑一下 daily_data_collection.py 更新全A
+4. 跑一下在tushare folder 里的 QMT_st_fill.py 去更新一下st和退市的股票，因为QMT不付费，没有权限。
+5. 策略specific:
+
+    中证500指增_LGBM策略（wind_choice文件夹）：
+        a. 跑一下 中证500指增_LGBM_weekly_to_daily.py (更换选股逻辑或者回测年份才会修改EXCEL_PATH和output_path_full)
+        b. 跑一下 中证500指增_LGBM_excel_upperlimit.py (更换选股逻辑或者回测年份才会修改input_path和saving_path)
+                数据收集wind+choice，收集对应的涨跌停和停牌的股票
+
+
+    中证500指增_AI团队策略:
+
+    启航一号策略:
+
+7. 运行 main.py
+
+
+############
+简化步骤:
+1. 更新 daily_stockpool.xlsx in E:\妖魔鬼怪\backtest\data\level1\daily\stock
+ ( 如果需要 更改 paths 选择策略 ) 
+2. run.py 运行 (需要choice, wind, and QMT all opened)
+
+if we do mutiple back test after initial -- run:
+3. change paths
+4. run backtest.py
+
+

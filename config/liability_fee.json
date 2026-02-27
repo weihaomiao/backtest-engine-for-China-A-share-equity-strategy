@@ -1,0 +1,11 @@
+{
+    "fees": {
+        "_comment": "基金日常运作计提费用（按年费率计提）。daily_accrual = (前日NAV * annual_rate) / 365，具体费率是基金合同决定",
+        "operational": { 
+            "management_fee_rate": 0.00002739726,
+            "custodian_fee_rate": 9.5890411e-7,
+            "administration_services_fee_rate": 4.10958904e-7,
+            "tax_fee_rate": 0.0
+        }
+    }
+}

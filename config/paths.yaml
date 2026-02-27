@@ -1,0 +1,33 @@
+# Level-1 data (daily stock pool, daily bars, index)
+level1:
+  daily:
+    stock:
+      stockpool: "data/level1/daily/stock/daily_stockpool.xlsx"
+      base_dir: "data/level1/daily/stock"
+    index:
+      base_dir: "data/level1/daily/index"
+
+# Strategy outputs used as backtest input (portfolio files)
+# name: single tag for this strategy; all filenames derive from it (daily_{name}.xlsx, {name}_diagnostic_summary.txt, etc.)
+input:
+  中证500指增_LGBM:
+    name: "全A_10个行业" # 策略名称 改
+    year: 2025  # 2025, 2026, ... 改
+
+    base_dir: "data/portfolio/中证500指增_LGBM"
+    strategy_data_dir: "../strategies/中证500指增_LGBM/data"  # relative to backtest project root
+    date_weekly_file: "date_weekly.xlsx"
+    date_daily_file: "date_daily.xlsx"
+
+# Backtest outputs: filenames are "{name}_{suffix}" using input[strategy].name
+output:
+  中证500指增_LGBM:
+    diagnostic_log: "diagnostic_summary.txt"
+    diagnostic_daily_csv: "diagnostic_details.csv"
+    performance_summary: "performance_summary.txt"
+    plot_equity: "equity_curve.png"
+  
+# Config files
+config:
+    stock_trade_fees: "config/stock_trade_fees.json"
+    liability_fee: "config/liability_fee.json"
